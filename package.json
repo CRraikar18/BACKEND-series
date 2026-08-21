@@ -1,0 +1,29 @@
+{
+  "name": "backend-series",
+  "version": "1.0.0",
+  "description": "learning process",
+  "keywords": [],
+  "homepage": "https://github.com/CRraikar18/BACKEND-series#readme",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/CRraikar18/BACKEND-series/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CRraikar18/BACKEND-series.git"
+  },
+  "license": "ISC",
+  "author": "chiragraikar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "env": "^0.0.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
