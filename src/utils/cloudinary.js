@@ -4,6 +4,10 @@ import { v2 as cloudinary } from "cloudinary";
 // Import Node.js native filesystem module to remove temporary local files from disk
 import fs from "fs";
 
+// Import dotenv to ensure environment variables are populated when module loads
+import dotenv from "dotenv";
+dotenv.config();
+
 // Configure Cloudinary credentials using environment variables
 cloudinary.config({
     // Account Cloud Name identifier
@@ -34,6 +38,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         // Return the complete Cloudinary response object containing secure_url and public_id
         return response;
     } catch (error) {
+        console.log("Cloudinary upload failed with error: ", error);
         // Remove the locally saved temporary file if the upload operation failed to prevent disk clogging
         fs.unlinkSync(localFilePath);
 

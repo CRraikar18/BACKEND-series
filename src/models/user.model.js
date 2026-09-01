@@ -82,13 +82,11 @@ const userSchema = new Schema(
 );
 
 // Mongoose Pre-save Hook: Executes immediately before saving a document to the database
-userSchema.pre("save", async function (next) {
+userSchema.pre("save", async function () {
     // Only hash password if the password field was modified or is new
-    if (!this.isModified("password")) return next();
+    if (!this.isModified("password")) return;
     // Hash password with a salt round factor of 10
     this.password = await bcrypt.hash(this.password, 10);
-    // Continue to the save operation
-    next();
 });
 // Custom Instance Method: Compares plain-text candidate password with hashed DB password
 userSchema.methods.isPasswordCorrect = async function (password) {
