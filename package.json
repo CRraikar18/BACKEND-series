@@ -4,7 +4,7 @@
   "description": "learning process",
   "keywords": [],
   "homepage": "https://github.com/CRraikar18/BACKEND-series#readme",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/CRraikar18/BACKEND-series/issues"
   },
@@ -16,11 +16,12 @@
   "author": "chiragraikar",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "cloudinary": "^2.10.1",
+    "cloudinary": "^2.11.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
@@ -29,7 +30,7 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.9.3",
     "mongoose-aggregate-paginate-v2": "^1.1.5",
-    "multer": "^2.2.0",
+    "multer": "^2.3.0",
     "prettier": "^3.9.6"
   },
   "devDependencies": {
